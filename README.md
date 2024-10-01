@@ -1,2 +1,2 @@
 # node-ppg
-Analyze photoplethysmogram (PPG) biosignals
+Analyze PPG (photoplethysmogram) biosignals
