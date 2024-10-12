@@ -1,5 +1,5 @@
-export default class PpgBatchAnalyzerImpl implements PpgBatchAnalyzer {
-    public static Class?: PpgBatchAnalyzerConstructor
+export default class PpgAnalyzerImpl implements PpgAnalyzer {
+    public static Class?: PpgAnalyzerConstructor
 
     protected constructor() {}
 
@@ -8,6 +8,6 @@ export default class PpgBatchAnalyzerImpl implements PpgBatchAnalyzer {
     }
 }
 
-export interface PpgBatchAnalyzer {}
+export interface PpgAnalyzer {}
 
-export type PpgBatchAnalyzerConstructor = new () => PpgBatchAnalyzer
+export type PpgAnalyzerConstructor = new () => PpgAnalyzer
