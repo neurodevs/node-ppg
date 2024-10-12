@@ -1,20 +1,20 @@
 import AbstractSpruceTest, { test, assert } from '@sprucelabs/test-utils'
-import PpgAnalyzerImpl, { PpgAnalyzer } from '../../PpgBatchAnalyzer'
+import PpgAnalyzerImpl, { PpgAnalyzer } from '../../PpgAnalyzer'
 
-export default class PpgBatchAnalyzerTest extends AbstractSpruceTest {
+export default class PpgAnalyzerTest extends AbstractSpruceTest {
     private static instance: PpgAnalyzer
 
     protected static async beforeEach() {
         await super.beforeEach()
-        this.instance = this.PpgBatchAnalyzer()
+        this.instance = this.PpgAnalyzer()
     }
 
     @test()
-    protected static async canCreatePpgBatchAnalyzer() {
+    protected static async canCreatePpgAnalyzer() {
         assert.isTruthy(this.instance)
     }
 
-    private static PpgBatchAnalyzer() {
+    private static PpgAnalyzer() {
         return PpgAnalyzerImpl.Create()
     }
 }
