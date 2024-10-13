@@ -62,5 +62,9 @@
     "moduleNameMapper": {
       "^#spruce/(.*)$": "<rootDir>/build/.spruce/$1"
     }
+  },
+  "dependencies": {
+    "@neurodevs/node-signal-processing": "^0.4.10",
+    "@sprucelabs/schema": "^30.0.486"
   }
 }
