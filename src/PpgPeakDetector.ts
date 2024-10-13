@@ -6,6 +6,7 @@ import {
     PeakDetector,
     Filter,
     PeakDetectorResults,
+    HilbertPeakDetectorClass,
 } from '@neurodevs/node-signal-processing'
 
 export default class PpgPeakDetectorImpl implements PpgPeakDetector {
@@ -42,14 +43,15 @@ export default class PpgPeakDetectorImpl implements PpgPeakDetector {
     public static Create(options: PpgPeakDetectorOptions) {
         let {
             sampleRate,
-            Filter: FilterClass = FirBandpassFilter,
+            Filter = FirBandpassFilter,
+            Detector = HilbertPeakDetector,
             lowCutoffHz = 0.4,
             highCutoffHz = 4.0,
             numTaps = 4 * Math.floor(sampleRate) + 1,
             attenuation = 50,
         } = assertOptions(options, ['sampleRate'])
 
-        const filter = new FilterClass({
+        const filter = new Filter({
             sampleRate,
             lowCutoffHz,
             highCutoffHz,
@@ -58,7 +60,7 @@ export default class PpgPeakDetectorImpl implements PpgPeakDetector {
             usePadding: true,
         })
 
-        const detector = new HilbertPeakDetector()
+        const detector = new Detector()
 
         return new (this.Class ?? this)({
             sampleRate,
@@ -91,6 +93,7 @@ export type PpgPeakDetectorConstructor = new (
 export interface PpgPeakDetectorOptions {
     sampleRate: number
     Filter?: FirBandpassFilterClass
+    Detector?: HilbertPeakDetectorClass
     lowCutoffHz?: number
     highCutoffHz?: number
     numTaps?: number
