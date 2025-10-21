@@ -1,6 +1,6 @@
 import PpgPeakDetectorImpl, {
     PpgPeakDetectorConstructorOptions,
-} from '../PpgPeakDetector'
+} from '../impl/PpgPeakDetector'
 
 export default class SpyPpgPeakDetector extends PpgPeakDetectorImpl {
     public static constructorHitCount = 0

@@ -3,7 +3,7 @@ import AbstractSpruceTest, { test, assert } from '@sprucelabs/test-utils'
 import { SpyFirBandpassFilter } from '@neurodevs/node-signal-processing'
 import PpgPeakDetectorImpl, {
     PpgPeakDetectorOptions,
-} from '../../PpgPeakDetector'
+} from '../../impl/PpgPeakDetector'
 import SpyPpgPeakDetector from '../../testDoubles/SpyPpgPeakDetector'
 
 export default class PpgPeakDetectorTest extends AbstractSpruceTest {

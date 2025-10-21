@@ -1,5 +1,5 @@
 import AbstractSpruceTest, { test, assert } from '@sprucelabs/test-utils'
-import PpgAnalyzerImpl, { PpgAnalyzer } from '../../PpgAnalyzer'
+import PpgAnalyzerImpl, { PpgAnalyzer } from '../../impl/PpgAnalyzer'
 
 export default class PpgAnalyzerTest extends AbstractSpruceTest {
     private static instance: PpgAnalyzer
