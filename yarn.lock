@@ -636,6 +636,11 @@
   dependencies:
     node-gyp "^10.0.1"
 
+"@neurodevs/generate-id@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@neurodevs/generate-id/-/generate-id-1.0.0.tgz#0a2b756c569d4fa12e01c744fa1bb8a094aa7606"
+  integrity sha512-F5UabBUeIql4WnS1P/mIUj4tuM3iT6s2mro96HcdDh4WMSwzlNisSh26VmmYaX2NMK1rzwshde01rW5+rMLuNQ==
+
 "@neurodevs/node-signal-processing@^0.4.10":
   version "0.4.11"
   resolved "https://registry.yarnpkg.com/@neurodevs/node-signal-processing/-/node-signal-processing-0.4.11.tgz#d9f4463f770f587da58601ec387e22a81d5fa120"
