@@ -1,4 +1,3 @@
-import { assertOptions } from '@sprucelabs/schema'
 import {
     HilbertPeakDetector,
     FirBandpassFilter,
@@ -21,7 +20,7 @@ export default class PpgPeakDetectorImpl implements PpgPeakDetector {
     protected attenuation: number
 
     protected constructor(options: PpgPeakDetectorConstructorOptions) {
-        let {
+        const {
             sampleRate,
             filter,
             detector,
@@ -29,7 +28,7 @@ export default class PpgPeakDetectorImpl implements PpgPeakDetector {
             highCutoffHz,
             numTaps,
             attenuation,
-        } = assertOptions(options, ['sampleRate'])
+        } = options
 
         this.sampleRate = sampleRate
         this.filter = filter
@@ -41,7 +40,7 @@ export default class PpgPeakDetectorImpl implements PpgPeakDetector {
     }
 
     public static Create(options: PpgPeakDetectorOptions) {
-        let {
+        const {
             sampleRate,
             Filter = FirBandpassFilter,
             Detector = HilbertPeakDetector,
@@ -49,7 +48,7 @@ export default class PpgPeakDetectorImpl implements PpgPeakDetector {
             highCutoffHz = 4.0,
             numTaps = 4 * Math.floor(sampleRate) + 1,
             attenuation = 50,
-        } = assertOptions(options, ['sampleRate'])
+        } = options
 
         const filter = new Filter({
             sampleRate,

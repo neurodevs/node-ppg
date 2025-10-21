@@ -1,9 +1,5 @@
 import { randomInt } from 'crypto'
-import AbstractSpruceTest, {
-    test,
-    assert,
-    errorAssert,
-} from '@sprucelabs/test-utils'
+import AbstractSpruceTest, { test, assert } from '@sprucelabs/test-utils'
 import { SpyFirBandpassFilter } from '@neurodevs/node-signal-processing'
 import PpgPeakDetectorImpl, {
     PpgPeakDetectorOptions,
@@ -23,16 +19,6 @@ export default class PpgPeakDetectorTest extends AbstractSpruceTest {
 
         this.options = this.generateRandomOptions()
         this.detector = this.Detector()
-    }
-
-    @test()
-    protected static async throwsWithMissingRequiredOptions() {
-        // @ts-ignore
-        const err = assert.doesThrow(() => new PpgPeakDetectorImpl())
-
-        errorAssert.assertError(err, 'MISSING_PARAMETERS', {
-            parameters: ['sampleRate'],
-        })
     }
 
     @test('works with sampleRate: 100, numTaps: 401', 100, 401)
