@@ -1,8 +1,23 @@
 {
   "name": "@neurodevs/node-ppg",
   "version": "0.0.1",
+  "description": "Analyze PPG (photoplethysmogram) biosignals",
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "tdd"
+  ],
+  "license": "MIT",
+  "author": "Eric Yates <hello@ericthecurious.com>",
+  "homepage": "https://github.com/neurodevs/node-ppg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neurodevs/node-ppg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neurodevs/node-ppg/issues"
+  },
   "main": "build/index.js",
-  "repository": "https://github.com/neurodevs/node-ppg.git",
   "scripts": {
     "build.ci": "yarn run build.tsc && yarn run build.resolve-paths && yarn run lint",
     "build.dev": "yarn run build.tsc --sourceMap ; yarn run resolve-paths.lint",
@@ -25,6 +40,10 @@
     "watch.rebuild": "yarn run clean.all && yarn install && yarn run watch.build.dev",
     "watch.tsc": "tsc -w"
   },
+  "dependencies": {
+    "@neurodevs/node-signal-processing": "^0.4.10",
+    "@sprucelabs/schema": "^30.0.486"
+  },
   "devDependencies": {
     "@sprucelabs/jest-json-reporter": "^8.0.413",
     "@sprucelabs/resolve-path-aliases": "^2.0.392",
@@ -40,10 +59,6 @@
     "ts-node": "^10.9.2",
     "tsc-watch": "^6.2.0",
     "typescript": "^5.6.2"
-  },
-  "description": "Analyze PPG (photoplethysmogram) biosignals",
-  "skill": {
-    "namespace": "node-ppg"
   },
   "jest": {
     "testRunner": "jest-circus/runner",
@@ -63,8 +78,7 @@
       "^#spruce/(.*)$": "<rootDir>/build/.spruce/$1"
     }
   },
-  "dependencies": {
-    "@neurodevs/node-signal-processing": "^0.4.10",
-    "@sprucelabs/schema": "^30.0.486"
+  "skill": {
+    "namespace": "node-ppg"
   }
 }
