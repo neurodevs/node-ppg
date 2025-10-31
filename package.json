@@ -44,7 +44,7 @@
     "@neurodevs/node-signal-processing": "^0.4.10"
   },
   "devDependencies": {
-    "@neurodevs/generate-id": "^1.0.0",
+    "@neurodevs/generate-id": "^1.0.9",
     "@sprucelabs/jest-json-reporter": "^8.0.413",
     "@sprucelabs/resolve-path-aliases": "^2.0.392",
     "@sprucelabs/test": "^9.0.47",

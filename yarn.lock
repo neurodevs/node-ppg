@@ -636,10 +636,10 @@
   dependencies:
     node-gyp "^10.0.1"
 
-"@neurodevs/generate-id@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@neurodevs/generate-id/-/generate-id-1.0.0.tgz#0a2b756c569d4fa12e01c744fa1bb8a094aa7606"
-  integrity sha512-F5UabBUeIql4WnS1P/mIUj4tuM3iT6s2mro96HcdDh4WMSwzlNisSh26VmmYaX2NMK1rzwshde01rW5+rMLuNQ==
+"@neurodevs/generate-id@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@neurodevs/generate-id/-/generate-id-1.0.9.tgz#e73eb0fced505a327dd986596ba017486056cba7"
+  integrity sha512-x+kjwOx2ho9pRb7THG2EuV5CfSJZYHffLvikZyXyyWMT6kIkvvCfjwgAP4dFkwEBCx1OgHoPlgIfVFxE4T+ihg==
 
 "@neurodevs/node-signal-processing@^0.4.10":
   version "0.4.11"
@@ -752,7 +752,7 @@
     tsconfig-paths "^4.2.0"
     yargs "^17.7.2"
 
-"@sprucelabs/schema@^30.0.486", "@sprucelabs/schema@^30.0.553":
+"@sprucelabs/schema@^30.0.553":
   version "30.2.0"
   resolved "https://registry.yarnpkg.com/@sprucelabs/schema/-/schema-30.2.0.tgz#4bb8459ba81bc0e6073061b381f709fb111d8888"
   integrity sha512-4WUSu1uhd+IY2lsEd04CVAtOkBOyLrJCOs10U+0bsSYic3x8o8IprF6SERDXo1RcnQlbST2cB0RKy8pzPrZMtw==
