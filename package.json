@@ -2,6 +2,7 @@
   "name": "@neurodevs/node-ppg",
   "version": "0.0.1",
   "description": "Analyze PPG (photoplethysmogram) biosignals",
+  "type": "module",
   "keywords": [
     "nodejs",
     "typescript",
